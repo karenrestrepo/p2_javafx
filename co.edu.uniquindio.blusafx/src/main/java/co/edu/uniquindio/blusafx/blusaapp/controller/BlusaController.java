@@ -92,8 +92,10 @@ public class BlusaController {
 
     }
 
+    private Blusa blusa;
+
     private void crearblusaAdornada() {
-        Blusa blusa = Blusa.builder()
+        blusa = Blusa.builder()
                 .referencia(txtReferencia.getText())
                 .talla(txtTalla.getText())
                 .color(txtColor.getText())
@@ -101,21 +103,19 @@ public class BlusaController {
                 .tipoAdorno(txtAdorno.getText())
                 .cantidadAdorno(Integer.parseInt(txtCantidadAdornos.getText()))
                 .build();
-        txtResultado.setText(blusa.toString());
     }
 
     private void crearblusaBasica() {
-        Blusa blusa = Blusa.builder()
+        blusa = Blusa.builder()
                 .referencia(txtReferencia.getText())
                 .talla(txtTalla.getText())
                 .color(txtColor.getText())
                 .tipoBlusa(txtTipoBlusa.getText())
                 .build();
-        txtResultado.setText(blusa.toString());
     }
 
     private void crearblusaEstampada() {
-        Blusa blusa = Blusa.builder()
+        blusa = Blusa.builder()
                 .referencia(txtReferencia.getText())
                 .talla(txtTalla.getText())
                 .color(txtColor.getText())
@@ -124,10 +124,10 @@ public class BlusaController {
                 .altoDiseno(Integer.parseInt(txtAltoDiseño.getText()))
                 .anchoDiseno(Integer.parseInt(txtAnchoDiseño.getText()))
                 .build();
-        txtResultado.setText(blusa.toString());
     }
 
     private void agregarBlusa() {
+        txtResultado.setText(blusa.toString());
 
     }
 
