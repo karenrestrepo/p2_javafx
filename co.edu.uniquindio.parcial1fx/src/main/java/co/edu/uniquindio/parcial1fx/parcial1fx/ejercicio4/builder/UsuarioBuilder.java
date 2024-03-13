@@ -6,7 +6,7 @@ public class UsuarioBuilder {
     protected String identificacion;
     protected String email;
     protected String celular;
-    protected  int maximoPasajeros;
+    protected  int edad;
 
     public UsuarioBuilder nombre(String nombre) {
         this.nombre = nombre;
@@ -28,12 +28,12 @@ public class UsuarioBuilder {
         return this;
     }
 
-    public UsuarioBuilder maximoPasajeros(int maximoPasajeros) {
-        this.maximoPasajeros = maximoPasajeros;
+    public UsuarioBuilder edad(int maximoPasajeros) {
+        this.edad = maximoPasajeros;
         return this;
     }
 
     public Usuario build(){
-        return new Usuario(nombre, identificacion, email, celular, maximoPasajeros);
+        return new Usuario(nombre, identificacion, email, celular, edad);
     }
 }

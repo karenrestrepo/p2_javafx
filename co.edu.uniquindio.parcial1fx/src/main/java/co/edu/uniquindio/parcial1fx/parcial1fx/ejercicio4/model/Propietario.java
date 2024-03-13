@@ -4,7 +4,7 @@ import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.builder.PropietarioBui
 
 import java.util.List;
 
-public class Propietario extends Asociado{
+public class Propietario extends Persona {
 
     Vehiculo vehiculoPrincipal;
     List<Vehiculo> listaVehiculosAsociados;

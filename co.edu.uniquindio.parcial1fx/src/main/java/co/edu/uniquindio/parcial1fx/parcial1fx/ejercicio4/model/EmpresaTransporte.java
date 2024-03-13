@@ -7,7 +7,7 @@ public class EmpresaTransporte {
     private String nombre;
     List<VehiculoCarga> listaVehiculosCarga = new ArrayList<>();
     List<VehiculoTransporte> listaVehiculosTransporte = new ArrayList<>();
-    List<Asociado> listaAsociados = new ArrayList<>();
+    List<Persona> listaPersonas = new ArrayList<>();
     List<Usuario> listaUsuarios = new ArrayList<>();
 
 
@@ -47,12 +47,12 @@ public class EmpresaTransporte {
         this.listaVehiculosTransporte = listaVehiculosPasajero;
     }
 
-    public List<Asociado> getListaAsociados() {
-        return listaAsociados;
+    public List<Persona> getListaAsociados() {
+        return listaPersonas;
     }
 
-    public void setListaAsociados(List<Asociado> listaAsociados) {
-        this.listaAsociados = listaAsociados;
+    public void setListaAsociados(List<Persona> listaPersonas) {
+        this.listaPersonas = listaPersonas;
     }
 
     public List<Usuario> getListaUsuarios() {

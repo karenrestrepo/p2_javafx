@@ -1,6 +1,5 @@
 package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4;
 
-import co.edu.uniquindio.empresaTransporte.Model.*;
 import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model.*;
 
 import java.util.ArrayList;
@@ -68,7 +67,7 @@ public class Main {
                 .identidicacion("196065")
                 .email("steven@gmail.com")
                 .celular("311598")
-                .maximoPasajeros(1)
+                .edad(19)
                 .build();
 
         Usuario usuario2 = Usuario.builder()
@@ -76,7 +75,7 @@ public class Main {
                 .identidicacion("194465")
                 .email("ana@gmail.com")
                 .celular("310998")
-                .maximoPasajeros(2)
+                .edad(20)
                 .build();
 
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga1);
@@ -85,7 +84,7 @@ public class Main {
         empresaTransporte.getListaVehiculosPasajero().add(vehiculoTransporte2);
         empresaTransporte.getListaUsuarios().add(usuario1);
         empresaTransporte.getListaUsuarios().add(usuario2);
-        
+
 
     }
 

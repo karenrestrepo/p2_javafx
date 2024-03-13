@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.parcial1fx.parcial1fx/co.edu.uniquindio.parcial1fx.parcial1fx.HelloApplication
+                                co.edu.uniquindio.parcial1fx.parcial1fx/co.edu.uniquindio.parcial1fx.parcial1fx.EmpresaTransporteApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

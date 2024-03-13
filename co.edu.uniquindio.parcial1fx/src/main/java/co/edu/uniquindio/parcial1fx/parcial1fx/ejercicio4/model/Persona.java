@@ -1,21 +1,19 @@
 package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model;
 
-public abstract class Asociado {
+public abstract class Persona {
 
     private String nombre;
     private String identidicacion;
     private String email;
     private String celular;
-    EmpresaTransporte ownedByEmpresaTransporte;
-    private Vehiculo vehiculo;
 
 
     /*Constructor*/
 
-    public Asociado() {
+    public Persona() {
     }
 
-    public Asociado(String nombre, String identidicacion, String email, String celular) {
+    public Persona(String nombre, String identidicacion, String email, String celular) {
         this.nombre = nombre;
         this.identidicacion = identidicacion;
         this.email = email;
@@ -56,21 +54,7 @@ public abstract class Asociado {
         this.celular = celular;
     }
 
-    public EmpresaTransporte getOwnedByEmpresaTransporte() {
-        return ownedByEmpresaTransporte;
-    }
 
-    public void setOwnedByEmpresaTransporte(EmpresaTransporte ownedByEmpresaTransporte) {
-        this.ownedByEmpresaTransporte = ownedByEmpresaTransporte;
-    }
-
-    public Vehiculo getVehiculo() {
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
-    }
 
     @Override
     public String toString() {
@@ -79,7 +63,6 @@ public abstract class Asociado {
                 ", identidicacion='" + identidicacion + '\'' +
                 ", email='" + email + '\'' +
                 ", celular='" + celular + '\'' +
-                ", vehiculo=" + vehiculo +
                 '}';
     }
 }

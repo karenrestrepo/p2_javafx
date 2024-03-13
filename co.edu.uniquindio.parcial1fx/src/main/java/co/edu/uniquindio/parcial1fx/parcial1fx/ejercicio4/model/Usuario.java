@@ -2,8 +2,8 @@ package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model;
 
 import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.builder.UsuarioBuilder;
 
-public class Usuario extends Asociado {
-    private  int maximoPasajeros;
+public class Usuario extends Persona {
+    private  int edad;
     VehiculoTransporte vehiculoAsociado;
 
 
@@ -13,13 +13,13 @@ public class Usuario extends Asociado {
 
     /*Constructor*/
 
-    public Usuario(int maximoPasajeros) {
+    public Usuario(int edad) {
 
     }
 
-    public Usuario(String nombre, String identidicacion, String email, String celular, int maximoPasajeros) {
+    public Usuario(String nombre, String identidicacion, String email, String celular, int edad) {
         super(nombre, identidicacion, email, celular);
-        this.maximoPasajeros = maximoPasajeros;
+        this.edad = edad;
     }
 
 
