@@ -1,6 +1,6 @@
-package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.builder;
+package co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Model.Builder;
 
-import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model.Propietario;
+import co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Model.Propietario;
 
 public class PropietarioBuilder {
 

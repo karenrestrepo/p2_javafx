@@ -1,6 +1,6 @@
-package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.factory;
+package co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Factory;
 
-import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model.EmpresaTransporte;
+import co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Model.EmpresaTransporte;
 
 public class ModelFactory {
 

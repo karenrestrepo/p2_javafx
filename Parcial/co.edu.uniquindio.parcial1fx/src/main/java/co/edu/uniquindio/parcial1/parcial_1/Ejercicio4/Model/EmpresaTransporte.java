@@ -1,4 +1,4 @@
-package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model;
+package co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class EmpresaTransporte {
 
 
     private  Propietario getBuildPropietario(String nombre, String identificacion, String email, String celular) {
-        return Propietario.builder()
+        return (Propietario.builder()
                 .nombre(nombre)
                 .identificacion(identificacion)
                 .email(email)

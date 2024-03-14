@@ -50,14 +50,14 @@ public class Main {
 
         Propietario propietario1 = Propietario.builder()
                 .nombre("Karen")
-                .identidicacion("1005065")
+                .identificacion("1005065")
                 .email("karen@gmail.com")
                 .celular("300489")
                 .build();
 
         Propietario propietario2 = Propietario.builder()
                 .nombre("Camilo")
-                .identidicacion("1006158")
+                .identificacion("1006158")
                 .email("camilo@gmail.com")
                 .celular("314589")
                 .build();
@@ -80,8 +80,8 @@ public class Main {
 
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga1);
         empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga2);
-        empresaTransporte.getListaVehiculosPasajero().add(vehiculoTransporte1);
-        empresaTransporte.getListaVehiculosPasajero().add(vehiculoTransporte2);
+        empresaTransporte.getListaVehiculosTransporte().add(vehiculoTransporte1);
+        empresaTransporte.getListaVehiculosTransporte().add(vehiculoTransporte2);
         empresaTransporte.getListaUsuarios().add(usuario1);
         empresaTransporte.getListaUsuarios().add(usuario2);
 

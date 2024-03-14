@@ -35,8 +35,8 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <TextArea fx:id="txtSolicitudPropietario" layoutX="219.0" layoutY="27.0" prefHeight="172.0" prefWidth="679.0" />
-                                    <Button fx:id="btnUsuariosMayoresEdad" layoutX="26.0" layoutY="38.0" mnemonicParsing="false" onAction="#onPropietariosMayoresEdad" text="Propietarios mayores de edad" />
+                                    <TextArea fx:id="txtSolicitudPropietario" layoutX="229.0" layoutY="27.0" prefHeight="172.0" prefWidth="679.0" />
+                                    <Button fx:id="btnPropietariosMayoresEdad" layoutX="26.0" layoutY="38.0" mnemonicParsing="false" onAction="#onPropietariosMayoresEdad" text="Propietarios mayores de edad" />
                                  </children>
                               </AnchorPane>
                           </items>
@@ -96,7 +96,7 @@
                                     <TextField fx:id="txtColorVehiculoTransporte" layoutX="571.0" layoutY="22.0" prefHeight="25.0" prefWidth="325.0" />
                                     <TextField fx:id="txtModeloVehiculoTransporte" layoutX="89.0" layoutY="81.0" prefHeight="25.0" prefWidth="325.0" />
                                     <TextField fx:id="txtPlacaVehiculoTransporte" layoutX="89.0" layoutY="22.0" prefHeight="25.0" prefWidth="316.0" />
-                                    <Button fx:id="btnCrearVehiculoCarga1" layoutX="456.0" layoutY="142.0" mnemonicParsing="false" onAction="#onCrearVehiculoCarga" text="Crear vehículo de carga" />
+                                    <Button fx:id="btnCrearVehiculoTransporte" layoutX="456.0" layoutY="142.0" mnemonicParsing="false" onAction="#onCrearVehiculoTransporte" text="Crear vehículo de carga" />
                                     <TextArea fx:id="txtVehiculoTransporteCreado" layoutX="34.0" layoutY="195.0" prefHeight="111.0" prefWidth="857.0" />
                                     <TextField fx:id="txtMarcaVehiculoTransporte" layoutX="89.0" layoutY="142.0" prefHeight="25.0" prefWidth="325.0" />
                                     <Label layoutX="456.0" layoutY="85.0" text="Máximo de pasajeros:" />
@@ -128,7 +128,7 @@
                                     <Label layoutX="35.0" layoutY="90.0" text="Identificación:" />
                                     <Label layoutX="35.0" layoutY="150.0" text="Email:" />
                                     <Label layoutX="472.0" layoutY="35.0" text="Celular:" />
-                                    <Button fx:id="btnCrearPropietario1" layoutX="472.0" layoutY="146.0" mnemonicParsing="false" onAction="#onCrearPropietario" text="Crear usuario " />
+                                    <Button fx:id="btnCrearUsuario" layoutX="472.0" layoutY="146.0" mnemonicParsing="false" onAction="#onCrearUsuario" text="Crear usuario " />
                                     <TextField fx:id="txtNombreUsuario" layoutX="128.0" layoutY="31.0" prefHeight="25.0" prefWidth="265.0" />
                                     <TextField fx:id="txtIdentificacionUsuario" layoutX="128.0" layoutY="88.0" prefHeight="25.0" prefWidth="265.0" />
                                     <TextField fx:id="txtEmailUsuario" layoutX="128.0" layoutY="146.0" prefHeight="25.0" prefWidth="265.0" />

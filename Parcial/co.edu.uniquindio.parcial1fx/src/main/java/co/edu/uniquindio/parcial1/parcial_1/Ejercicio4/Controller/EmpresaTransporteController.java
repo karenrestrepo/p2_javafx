@@ -1,15 +1,14 @@
-package co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.controller;
+package co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.factory.ModelFactory;
-import co.edu.uniquindio.parcial1fx.parcial1fx.ejercicio4.model.Propietario;
+import co.edu.uniquindio.parcial1.parcial_1.Ejercicio4.Factory.ModelFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class EmpresaTransporteController {
 
