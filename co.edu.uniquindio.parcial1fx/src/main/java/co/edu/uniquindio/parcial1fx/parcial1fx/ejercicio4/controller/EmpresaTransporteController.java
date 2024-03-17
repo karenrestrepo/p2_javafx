@@ -191,7 +191,6 @@ public class EmpresaTransporteController {
                 txtIdentificacionPropietario.getText(),
                 txtEmailPropietario.getText(),
                 txtCelularPropietario.getText());
-        txtPropietarioCreado.setText(String.valueOf(true));
     }
 
 }
