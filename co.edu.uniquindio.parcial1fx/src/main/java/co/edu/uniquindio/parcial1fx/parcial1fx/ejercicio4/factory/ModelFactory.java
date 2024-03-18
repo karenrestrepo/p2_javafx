@@ -29,4 +29,8 @@ public class ModelFactory {
                                     String celular) {
         return empresaTransporte.crearPropietario(nombre, identificacion, email, celular);
     }
+
+    public String obtenerUsuariosMayoresEdad(String edad) {
+        return empresaTransporte.obtenerUsuariosMayoresEdad(edad);
+    }
 }

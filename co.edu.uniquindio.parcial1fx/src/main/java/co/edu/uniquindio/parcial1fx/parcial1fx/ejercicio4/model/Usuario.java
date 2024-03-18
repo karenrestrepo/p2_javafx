@@ -22,5 +22,11 @@ public class Usuario extends Persona {
         this.edad = edad;
     }
 
+    public int getEdad() {
+        return edad;
+    }
 
+    public VehiculoTransporte getVehiculoAsociado() {
+        return vehiculoAsociado;
+    }
 }

@@ -98,4 +98,19 @@ public class EmpresaTransporte {
     public void setListaUsuarios(List<Usuario> listaUsuarios) {
         this.listaUsuarios = listaUsuarios;
     }
+
+    public String obtenerUsuariosMayoresEdad(String edad) {
+        String resultado = "";
+
+        for (Usuario usuario : getListaUsuarios()) {
+            if (usuario.getEdad() >= 18) {
+                resultado += usuario.toString();
+            }
+            else {
+                resultado = "No hay ususarios mayores de edad";
+            }
+            
+        }
+        return resultado;
+    }
 }

@@ -137,6 +137,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onCrearPropietario(ActionEvent event) {
+        crearPropietario();
 
     }
 
@@ -167,6 +168,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onUsuariosMayoresEdad(ActionEvent event) {
+        obtenerUsuariosMayoresEdad();
 
     }
 
@@ -191,6 +193,11 @@ public class EmpresaTransporteController {
                 txtIdentificacionPropietario.getText(),
                 txtEmailPropietario.getText(),
                 txtCelularPropietario.getText());
+    }
+
+    private void obtenerUsuariosMayoresEdad() {
+        String reultado = modelFactory.obtenerUsuariosMayoresEdad(txtEdadUsuario.getText());
+        txtSolicitudUsuario.setText(reultado);
     }
 
 }
