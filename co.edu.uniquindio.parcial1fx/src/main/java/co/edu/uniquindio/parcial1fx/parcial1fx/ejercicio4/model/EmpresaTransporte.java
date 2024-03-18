@@ -99,11 +99,11 @@ public class EmpresaTransporte {
         this.listaUsuarios = listaUsuarios;
     }
 
-    public String obtenerUsuariosMayoresEdad(String edad) {
+    public String obtenerUsuariosMayoresEdad(int edad) {
         String resultado = "";
 
         for (Usuario usuario : getListaUsuarios()) {
-            if (usuario.getEdad() >= 18) {
+            if (usuario.getEdad() >= edad) {
                 resultado += usuario.toString();
             }
             else {

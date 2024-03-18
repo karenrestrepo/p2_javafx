@@ -29,4 +29,11 @@ public class Usuario extends Persona {
     public VehiculoTransporte getVehiculoAsociado() {
         return vehiculoAsociado;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "edad=" + edad +
+                '}';
+    }
 }

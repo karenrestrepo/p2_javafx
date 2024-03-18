@@ -31,6 +31,6 @@ public class ModelFactory {
     }
 
     public String obtenerUsuariosMayoresEdad(String edad) {
-        return empresaTransporte.obtenerUsuariosMayoresEdad(edad);
+        return empresaTransporte.obtenerUsuariosMayoresEdad(Integer.parseInt(edad));
     }
 }
