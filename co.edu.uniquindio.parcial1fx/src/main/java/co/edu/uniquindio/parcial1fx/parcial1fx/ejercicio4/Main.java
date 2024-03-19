@@ -85,7 +85,39 @@ public class Main {
         empresaTransporte.getListaUsuarios().add(usuario1);
         empresaTransporte.getListaUsuarios().add(usuario2);
 
+        vehiculoTransporte1.getListaUsuariosAsociados().add(usuario1);
+        vehiculoTransporte1.getListaUsuariosAsociados().add(usuario2);
 
+
+        int numeroUsuarios = 0;
+
+        for (VehiculoTransporte ve: empresaTransporte.getListaVehiculosTransporte()) {
+            if(ve.getPlaca().equals("GDFD")){
+               numeroUsuarios = ve.getListaUsuariosAsociados().size();
+            }
+        }
+
+        String datos = "";
+        for (VehiculoTransporte ve: empresaTransporte.getListaVehiculosTransporte()) {
+            if(ve.getPlaca().equals("GDFD")){
+                datos = obtenerDatosUsuarios(ve);
+                break;
+            }
+        }
+
+
+    }
+
+    private static String obtenerDatosUsuarios(VehiculoTransporte ve) {
+        String datos = "";
+
+        for (Usuario usuario : ve.getListaUsuariosAsociados()) {
+            datos = datos + usuario.toString()+"\n";
+        }
+
+        return datos;
+
+//        return  ve.getListaUsuariosAsociados().toString();
     }
 
     private static void calcularTotalPasajeros() {

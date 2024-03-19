@@ -22,5 +22,18 @@ public class Usuario extends Persona {
         this.edad = edad;
     }
 
+    public int getEdad() {
+        return edad;
+    }
 
+    public VehiculoTransporte getVehiculoAsociado() {
+        return vehiculoAsociado;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "edad=" + edad +
+                '}';
+    }
 }
