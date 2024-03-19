@@ -7,8 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import co.edu.uniquindio.parcial1.parcial1app.factory.ModelFactory;
 
 public class EmpresaTransporteController {
+    ModelFactory modelFactory;
 
     @FXML
     private ResourceBundle resources;
@@ -138,6 +140,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onCrearPropietario(ActionEvent event) {
+        crearPropietario();
 
     }
 
@@ -168,6 +171,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onUsuariosMayoresEdad(ActionEvent event) {
+        obtenerUsuariosMayoresEdad();
 
     }
 
@@ -183,10 +187,20 @@ public class EmpresaTransporteController {
 
     @FXML
     void initialize() {
+            modelFactory = ModelFactory.getInstance();
+        }
+
+
+        private void crearPropietario() {
+            modelFactory.crearPropietario(txtNombrePropietario.getText(),
+                    txtCedulaPropietario.getText(),
+                    txtEmailPropietario.getText(),
+                    txtCelularPropietario.getText());
+        }
+
+        private void obtenerUsuariosMayoresEdad() {
+            String resultado = modelFactory.obtenerUsuariosMayoresEdad(txtEdadUsuario.getText());
+            txtResultadoUsuario.setText(resultado);
+        }
 
     }
-
-    /*hhhh*/
-
-}
-
