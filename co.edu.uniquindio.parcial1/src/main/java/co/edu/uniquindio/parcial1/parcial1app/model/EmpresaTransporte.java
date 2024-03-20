@@ -228,4 +228,48 @@ public class EmpresaTransporte {
         return resultado;
     }
 
+    public int obtenerUsuariosMovilizados(String placa) {
+        int numeroUsuarios = 0;
+
+        for (VehiculoTransporte vehiculoTransporte: getListaVehiculosTransporte()) {
+            if(vehiculoTransporte.getPlaca().equals(placa)){
+                numeroUsuarios = vehiculoTransporte.getListaUsuariosAsociados().size();
+            }
+        }
+        return numeroUsuarios;
+
+
+//        String datos = "";
+//        for (VehiculoTransporte vehiculoTransporte: getListaVehiculosTransporte()) {
+//            if(vehiculoTransporte.getPlaca().equals(placa)){
+//                datos = obtenerDatosUsuarios(vehiculoTransporte);
+//                break;
+//            }
+//        }
+    }
+
+
+    /*Si en vez del numero de usuarios pide los datos*/
+
+//    private String obtenerDatosUsuarios(VehiculoTransporte vehiculoTransporte) {
+//        String datos = "";
+//
+//        for (Usuario usuario : vehiculoTransporte.getListaUsuariosAsociados()) {
+//            datos += usuario.toString()+"\n";
+//        }
+//
+//        return datos;
+//
+//        return  vehiculoTransporte.getListaUsuariosAsociados().toString();
+//     }
+    public int obtenerPropietarioMayorEdad() {
+        int resultado = 0;
+
+        for (Propietario propietario : getListaPropietarios()) {
+            if (propietario.getEdad() > 40) {
+                resultado += 1;
+            }
+        }
+        return resultado;
+    }
 }

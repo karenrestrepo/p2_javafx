@@ -169,6 +169,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onPropietarioMayorEdad(ActionEvent event) {
+        obtenerPropietarioMayorEdad();
 
     }
 
@@ -185,6 +186,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onUsuariosMovilizadosVehiculoTransporte(ActionEvent event) {
+        obtenerUsuariosMovilizados();
 
     }
 
@@ -296,4 +298,22 @@ public class EmpresaTransporteController {
         txtResultadoUsuario.setText(resultado);
     }
 
+    private void obtenerUsuariosMovilizados() {
+        if(!txtPlacaUsuarioVehiculoTransporte.getText().isEmpty()){
+            int resultado = modelFactory.obtenerUsuariosMovilizados(txtPlacaUsuarioVehiculoTransporte.getText());
+            txtResultadoVehiculoTransporte.setText(String.valueOf(resultado));
+        }else{
+            txtResultadoVehiculoTransporte.setText("El campo esta vacio, es requerido....");
+        }
+
     }
+
+    private void obtenerPropietarioMayorEdad() {
+
+        int resultado = modelFactory.obtenerPropietarioMayorEdad();
+        txtResultadoPropietario.setText(String.valueOf(resultado));
+
+
+    }
+
+}

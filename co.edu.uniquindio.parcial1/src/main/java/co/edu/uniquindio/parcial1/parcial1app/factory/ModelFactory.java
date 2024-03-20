@@ -76,7 +76,7 @@ public class ModelFactory {
                 .nombre("Camilo")
                 .cedula("1006158")
                 .email("camilo@gmail.com")
-                .edad(40)
+                .edad(41)
                 .celular("314589")
                 .build();
 
@@ -158,5 +158,13 @@ public class ModelFactory {
                                            String numeroChasis,
                                            int maximoPasajeros) {
         return empresaTransporte.crearVehiculoTransporte(placa, modelo, marca, color, numeroChasis, maximoPasajeros);
+    }
+
+    public int obtenerUsuariosMovilizados(String placa) {
+        return empresaTransporte.obtenerUsuariosMovilizados(placa);
+    }
+
+    public int obtenerPropietarioMayorEdad() {
+        return empresaTransporte.obtenerPropietarioMayorEdad();
     }
 }

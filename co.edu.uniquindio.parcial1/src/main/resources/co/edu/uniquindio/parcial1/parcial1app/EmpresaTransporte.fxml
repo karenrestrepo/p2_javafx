@@ -40,7 +40,7 @@
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
                                     <TextArea fx:id="txtResultadoPropietario" layoutX="223.0" layoutY="27.0" prefHeight="119.0" prefWidth="471.0" />
-                                    <Button fx:id="btnPropietarioMayorEdad" layoutX="25.0" layoutY="42.0" mnemonicParsing="false" onAction="#onPropietarioMayorEdad" text="Propietarios mayores de edad" />
+                                    <Button fx:id="btnPropietarioMayorEdad" layoutX="25.0" layoutY="42.0" mnemonicParsing="false" onAction="#onPropietarioMayorEdad" text="Propietarios mayores de 40 años" />
                                  </children>
                               </AnchorPane>
                           </items>
