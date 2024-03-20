@@ -123,13 +123,40 @@ public class ModelFactory {
     }
 
     public boolean crearPropietario(String nombre,
-                                    String identificacion,
+                                    String cedula,
                                     String email,
-                                    String celular) {
-        return empresaTransporte.crearPropietario(nombre, identificacion, email, celular);
+                                    String celular,
+                                    int edad) {
+        return empresaTransporte.crearPropietario(nombre, cedula, email, celular, edad);
     }
 
     public String obtenerUsuariosMayoresEdad(String edad) {
         return empresaTransporte.obtenerUsuariosMayoresEdad();
+    }
+
+    public boolean crearUsuario(String nombre,
+                                String cedula,
+                                int peso,
+                                int edad) {
+        return empresaTransporte.crearUsuario(nombre, cedula, peso, edad);
+    }
+
+    public boolean crearVehiculoCarga(String placa,
+                                      String modelo,
+                                      String marca,
+                                      String color,
+                                      String numeroChasis,
+                                      Double capacidad,
+                                      int numeroEjes) {
+        return empresaTransporte.crearVehiculoCarga(placa, modelo, marca, color, numeroChasis, capacidad, numeroEjes);
+    }
+
+    public boolean crearVehiculoTransporte(String placa,
+                                           String modelo,
+                                           String marca,
+                                           String color,
+                                           String numeroChasis,
+                                           int maximoPasajeros) {
+        return empresaTransporte.crearVehiculoTransporte(placa, modelo, marca, color, numeroChasis, maximoPasajeros);
     }
 }
