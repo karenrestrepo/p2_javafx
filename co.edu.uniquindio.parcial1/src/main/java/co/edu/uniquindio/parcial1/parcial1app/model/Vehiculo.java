@@ -3,6 +3,11 @@ package co.edu.uniquindio.parcial1.parcial1app.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/*Principio abierto / cerrado
+* en caso de tener que agregar otro vehiculo, se crea una clase
+* que extiende de vehículo y de esta forma está abierto a la
+* extención y cerrado a la modificación*/
+
 public abstract class Vehiculo {
 
     private String placa;
@@ -10,6 +15,7 @@ public abstract class Vehiculo {
     private String marca;
     private String color;
     private String numeroChasis;
+    EmpresaTransporte ownedByEmpresaTransporte;
     Propietario propietarioAsociado;
     List<Propietario> listaPropietariosAsociados = new ArrayList<>();
 
@@ -57,6 +63,14 @@ public abstract class Vehiculo {
 
     public void setPlaca(String placa) {
         this.placa = placa;
+    }
+
+    public EmpresaTransporte getOwnedByEmpresaTransporte() {
+        return ownedByEmpresaTransporte;
+    }
+
+    public void setOwnedByEmpresaTransporte(EmpresaTransporte ownedByEmpresaTransporte) {
+        this.ownedByEmpresaTransporte = ownedByEmpresaTransporte;
     }
 
     public void setModelo(String modelo) {

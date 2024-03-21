@@ -10,6 +10,7 @@ public class Propietario {
     private String email;
     private int edad;
     private String celular;
+    EmpresaTransporte ownedByEmpresaTransporte;
     Vehiculo vehiculoPrincipal;
     List<Vehiculo> listaVehiculosAsociados;
 
@@ -51,12 +52,20 @@ public class Propietario {
         return celular;
     }
 
+    public EmpresaTransporte getOwnedByEmpresaTransporte() {
+        return ownedByEmpresaTransporte;
+    }
+
     public Vehiculo getVehiculoPrincipal() {
         return vehiculoPrincipal;
     }
 
     public List<Vehiculo> getListaVehiculosAsociados() {
         return listaVehiculosAsociados;
+    }
+
+    public void setOwnedByEmpresaTransporte(EmpresaTransporte ownedByEmpresaTransporte) {
+        this.ownedByEmpresaTransporte = ownedByEmpresaTransporte;
     }
 
     @Override

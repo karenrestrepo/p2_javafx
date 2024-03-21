@@ -120,6 +120,17 @@ public class ModelFactory {
         vehiculoTransporte2.getListaPropietariosAsociados().add(propietario2);
         vehiculoCarga2.getListaPropietariosAsociados().add(propietario1);
         vehiculoCarga2.getListaPropietariosAsociados().add(propietario2);
+
+        vehiculoCarga1.setOwnedByEmpresaTransporte(empresaTransporte);
+        vehiculoCarga2.setOwnedByEmpresaTransporte(empresaTransporte);
+        vehiculoTransporte1.setOwnedByEmpresaTransporte(empresaTransporte);
+        vehiculoTransporte2.setOwnedByEmpresaTransporte(empresaTransporte);
+        propietario1.setOwnedByEmpresaTransporte(empresaTransporte);
+        propietario2.setOwnedByEmpresaTransporte(empresaTransporte);
+        usuario1.setOwnedByEmpresaTransporte(empresaTransporte);
+        usuario2.setOwnedByEmpresaTransporte(empresaTransporte);
+        usuario3.setOwnedByEmpresaTransporte(empresaTransporte);
+
     }
 
     public boolean crearPropietario(String nombre,
@@ -166,5 +177,9 @@ public class ModelFactory {
 
     public int obtenerPropietarioMayorEdad() {
         return empresaTransporte.obtenerPropietarioMayorEdad();
+    }
+
+    public String obtenerUsuariosPesoSuperior(Double peso) {
+        return empresaTransporte.obtenerUsuariosPesoSuperior(peso);
     }
 }

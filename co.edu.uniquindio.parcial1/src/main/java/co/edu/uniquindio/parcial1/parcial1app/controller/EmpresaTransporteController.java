@@ -192,6 +192,7 @@ public class EmpresaTransporteController {
 
     @FXML
     void onUsuariosPesoSuperior(ActionEvent event) {
+        obtenerUsuariosPesoSuperior();
 
     }
 
@@ -313,6 +314,16 @@ public class EmpresaTransporteController {
         int resultado = modelFactory.obtenerPropietarioMayorEdad();
         txtResultadoPropietario.setText(String.valueOf(resultado));
 
+
+    }
+
+    private void obtenerUsuariosPesoSuperior() {
+        if(!txtPesoUsuariosSuperior.getText().isEmpty()){
+            String resultado = modelFactory.obtenerUsuariosPesoSuperior(Double.valueOf(txtPesoUsuariosSuperior.getText()));
+            txtResultadoUsuario.setText(resultado);
+        }else{
+            txtResultadoUsuario.setText("El campo esta vacio, es requerido....");
+        }
 
     }
 

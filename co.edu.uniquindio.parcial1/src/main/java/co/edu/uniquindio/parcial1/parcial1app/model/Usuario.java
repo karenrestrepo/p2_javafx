@@ -7,6 +7,7 @@ public class Usuario {
     private String cedula;
     private int edad;
     private double peso;
+    EmpresaTransporte ownedByEmpresaTransporte;
     VehiculoTransporte vehiculoAsociado;
 
 
@@ -44,6 +45,14 @@ public class Usuario {
 
     public VehiculoTransporte getVehiculoAsociado() {
         return vehiculoAsociado;
+    }
+
+    public EmpresaTransporte getOwnedByEmpresaTransporte() {
+        return ownedByEmpresaTransporte;
+    }
+
+    public void setOwnedByEmpresaTransporte(EmpresaTransporte ownedByEmpresaTransporte) {
+        this.ownedByEmpresaTransporte = ownedByEmpresaTransporte;
     }
 
     @Override

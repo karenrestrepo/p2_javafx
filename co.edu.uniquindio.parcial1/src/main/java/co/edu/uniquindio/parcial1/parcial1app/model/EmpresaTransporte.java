@@ -218,7 +218,7 @@ public class EmpresaTransporte {
 
         for (Usuario usuario : getListaUsuarios()) {
             if (usuario.getEdad() >= 18) {
-                resultado += usuario.toString();
+                resultado += usuario.toString() +"\n";
             }
             else {
                 resultado = "No hay ususarios mayores de edad";
@@ -271,5 +271,17 @@ public class EmpresaTransporte {
             }
         }
         return resultado;
+    }
+
+    public String obtenerUsuariosPesoSuperior(Double peso) {
+        String datos = "";
+
+        for (Usuario usuario : getListaUsuarios()) {
+            if (usuario.getPeso() > peso) {
+                datos += usuario.toString() +"\n";
+            }
+
+        }
+        return datos;
     }
 }
