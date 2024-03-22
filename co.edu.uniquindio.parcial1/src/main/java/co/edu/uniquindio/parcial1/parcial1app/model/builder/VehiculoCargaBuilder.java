@@ -5,7 +5,7 @@ import co.edu.uniquindio.parcial1.parcial1app.model.VehiculoCarga;
 public class VehiculoCargaBuilder {
 
     protected String placa;
-    protected String modelo;
+    protected int modelo;
     protected String marca;
     protected String color;
     protected String numeroChasis;
@@ -17,7 +17,7 @@ public class VehiculoCargaBuilder {
         return this;
     }
 
-    public VehiculoCargaBuilder modelo(String modelo) {
+    public VehiculoCargaBuilder modelo(int modelo) {
         this.modelo = modelo;
         return this;
     }

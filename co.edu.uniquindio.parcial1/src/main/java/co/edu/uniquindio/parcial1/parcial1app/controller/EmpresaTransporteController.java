@@ -33,10 +33,17 @@ public class EmpresaTransporteController {
     private Button btnCrearVehiculoTransporte;
 
     @FXML
+    private Button btnModeloInferior;
+
+    @FXML
     private Button btnPropietarioMayorEdad;
 
     @FXML
     private Button btnTotalPasajerosVehiculoTransporte;
+
+    @FXML
+    private Button btnUsuariosEdadSuperior;
+
 
     @FXML
     private Button btnUsuariosMayoresEdad;
@@ -76,6 +83,9 @@ public class EmpresaTransporteController {
 
     @FXML
     private TextField txtEdadUsuario;
+
+    @FXML
+    private TextField txtEdadUsuariosSuperior;
 
     @FXML
     private TextField txtEjesVehiculoCarga;
@@ -168,6 +178,12 @@ public class EmpresaTransporteController {
     }
 
     @FXML
+    void onModeloInferior(ActionEvent event) {
+        obtenerModeloInferior();
+
+    }
+
+    @FXML
     void onPropietarioMayorEdad(ActionEvent event) {
         obtenerPropietarioMayorEdad();
 
@@ -175,6 +191,12 @@ public class EmpresaTransporteController {
 
     @FXML
     void onTotalPasajerosVehiculoTransporte(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onUsuariosEdadSuperior(ActionEvent event) {
+        obtenerUsuariosEdadSuperior();
 
     }
 
@@ -190,11 +212,6 @@ public class EmpresaTransporteController {
 
     }
 
-    @FXML
-    void onUsuariosPesoSuperior(ActionEvent event) {
-        obtenerUsuariosPesoSuperior();
-
-    }
 
     @FXML
     void initialize() {
@@ -248,7 +265,7 @@ public class EmpresaTransporteController {
 
     private void crearVehiculoCarga() {
         if (modelFactory.crearVehiculoCarga(txtPlacaVehiculoCarga.getText(),
-                txtModeloVehiculoCarga.getText(),
+                Integer.parseInt(txtModeloVehiculoCarga.getText()),
                 txtMarcaVehiculoCarga.getText(),
                 txtColorVehiculoCarga.getText(),
                 txtChasisVehiculoCarga.getText(),
@@ -256,7 +273,7 @@ public class EmpresaTransporteController {
                 Integer.parseInt(txtEjesVehiculoCarga.getText()))) {
             vehiculoCarga = VehiculoCarga.builder()
                     .placa(txtPlacaVehiculoCarga.getText())
-                    .modelo(txtModeloVehiculoCarga.getText())
+                    .modelo(Integer.parseInt(txtModeloVehiculoCarga.getText()))
                     .marca(txtMarcaVehiculoCarga.getText())
                     .color(txtColorVehiculoCarga.getText())
                     .numeroChasis(txtChasisVehiculoCarga.getText())
@@ -274,14 +291,14 @@ public class EmpresaTransporteController {
 
     private void crearVehiculoTransporte() {
         if (modelFactory.crearVehiculoTransporte(txtPlacaVehiculoTransporte.getText(),
-                txtModeloVehiculoTransporte.getText(),
+                Integer.parseInt(txtModeloVehiculoTransporte.getText()),
                 txtMarcaVehiculoTransporte.getText(),
                 txtColorVehiculoTransporte.getText(),
                 txtChasisVehiculoTransporte.getText(),
                 Integer.parseInt(txtMaximoPasajerosVehiculoTransporte.getText()))) {
             vehiculoTransporte = VehiculoTransporte.builder()
                     .placa(txtPlacaVehiculoTransporte.getText())
-                    .modelo(txtModeloVehiculoTransporte.getText())
+                    .modelo(Integer.parseInt(txtModeloVehiculoTransporte.getText()))
                     .marca(txtMarcaVehiculoTransporte.getText())
                     .color(txtColorVehiculoTransporte.getText())
                     .numeroChasis(txtChasisVehiculoTransporte.getText())
@@ -317,13 +334,21 @@ public class EmpresaTransporteController {
 
     }
 
-    private void obtenerUsuariosPesoSuperior() {
-        if(!txtPesoUsuariosSuperior.getText().isEmpty()){
-            String resultado = modelFactory.obtenerUsuariosPesoSuperior(Double.valueOf(txtPesoUsuariosSuperior.getText()));
+    private void obtenerUsuariosEdadSuperior() {
+        if(!txtEdadUsuariosSuperior.getText().isEmpty()){
+            String resultado = modelFactory.obtenerUsuariosEdadSuperior(Integer.parseInt(txtEdadUsuariosSuperior.getText()));
             txtResultadoUsuario.setText(resultado);
         }else{
             txtResultadoUsuario.setText("El campo esta vacio, es requerido....");
         }
+
+    }
+
+    private void obtenerModeloInferior() {
+
+        int resultado = modelFactory.obtenerModeloInferior();
+        txtResultadoVehiculoCarga.setText(String.valueOf(resultado));
+
 
     }
 

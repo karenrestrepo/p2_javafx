@@ -28,7 +28,7 @@ public class ModelFactory {
     private void inicializarDatos() {
         VehiculoCarga vehiculoCarga1 = VehiculoCarga.builder()
                 .placa("abc123")
-                .modelo("2020")
+                .modelo(2021)
                 .marca("Mercedez")
                 .color("Azul")
                 .numeroChasis("LJCPCBLCX11000237")
@@ -38,7 +38,7 @@ public class ModelFactory {
 
         VehiculoCarga vehiculoCarga2 = VehiculoCarga.builder()
                 .placa("def456")
-                .modelo("2018")
+                .modelo(2018)
                 .marca("Mercedez")
                 .color("Negro")
                 .numeroChasis("LJCPCBLCX11000299")
@@ -48,7 +48,7 @@ public class ModelFactory {
 
         VehiculoTransporte vehiculoTransporte1 = VehiculoTransporte.builder()
                 .placa("ghi789")
-                .modelo("2003")
+                .modelo(2003)
                 .marca("Volvo")
                 .color("Blanco")
                 .numeroChasis("YJCPCBLCX11000230")
@@ -57,7 +57,7 @@ public class ModelFactory {
 
         VehiculoTransporte vehiculoTransporte2 = VehiculoTransporte.builder()
                 .placa("jkl014")
-                .modelo("2020")
+                .modelo(2020)
                 .marca("Volvo")
                 .color("Blanco")
                 .numeroChasis("YJCPCBLCX11000211")
@@ -153,7 +153,7 @@ public class ModelFactory {
     }
 
     public boolean crearVehiculoCarga(String placa,
-                                      String modelo,
+                                      int modelo,
                                       String marca,
                                       String color,
                                       String numeroChasis,
@@ -163,7 +163,7 @@ public class ModelFactory {
     }
 
     public boolean crearVehiculoTransporte(String placa,
-                                           String modelo,
+                                           int modelo,
                                            String marca,
                                            String color,
                                            String numeroChasis,
@@ -179,7 +179,11 @@ public class ModelFactory {
         return empresaTransporte.obtenerPropietarioMayorEdad();
     }
 
-    public String obtenerUsuariosPesoSuperior(Double peso) {
-        return empresaTransporte.obtenerUsuariosPesoSuperior(peso);
+    public String obtenerUsuariosEdadSuperior(int edad) {
+        return empresaTransporte.obtenerUsuariosEdadSuperior(edad);
+    }
+
+    public int obtenerModeloInferior() {
+        return empresaTransporte.obtenerModeloInferior();
     }
 }

@@ -94,7 +94,7 @@ public class EmpresaTransporte {
     }
 
 
-    public boolean crearVehiculoCarga(String placa, String modelo, String marca, String color, String numeroChasis, Double capacidad, int numeroEjes) {
+    public boolean crearVehiculoCarga(String placa, int modelo, String marca, String color, String numeroChasis, Double capacidad, int numeroEjes) {
         VehiculoCarga vehiculoCargaEncontrado = obtenerVehiculoCarga(placa);
         if (vehiculoCargaEncontrado == null) {
             VehiculoCarga vehiculoCarga = getBuildVehiculoCarga(placa, modelo, marca, color, numeroChasis, capacidad, numeroEjes);
@@ -107,7 +107,7 @@ public class EmpresaTransporte {
     }
 
 
-    private  VehiculoCarga getBuildVehiculoCarga(String placa, String modelo, String marca, String color, String numeroChasis, Double capacidad, int numeroEjes) {
+    private  VehiculoCarga getBuildVehiculoCarga(String placa, int modelo, String marca, String color, String numeroChasis, Double capacidad, int numeroEjes) {
         return VehiculoCarga.builder()
                 .placa(placa)
                 .modelo(modelo)
@@ -131,7 +131,7 @@ public class EmpresaTransporte {
         return vehiculoCarga;
     }
 
-    public boolean crearVehiculoTransporte(String placa, String modelo, String marca, String color, String numeroChasis, int maximoPasajeros) {
+    public boolean crearVehiculoTransporte(String placa, int modelo, String marca, String color, String numeroChasis, int maximoPasajeros) {
         VehiculoTransporte vehiculoTransporteEncontrado = obtenerVehiculoTransporte(placa);
         if (vehiculoTransporteEncontrado == null) {
             VehiculoTransporte vehiculoTransporte = getBuildVehiculoTransporte(placa, modelo, marca, color, numeroChasis, maximoPasajeros);
@@ -144,7 +144,7 @@ public class EmpresaTransporte {
     }
 
 
-    private VehiculoTransporte getBuildVehiculoTransporte(String placa, String modelo, String marca, String color, String numeroChasis, int maximoPasajeros) {
+    private VehiculoTransporte getBuildVehiculoTransporte(String placa, int modelo, String marca, String color, String numeroChasis, int maximoPasajeros) {
         return VehiculoTransporte.builder()
                 .placa(placa)
                 .modelo(modelo)
@@ -283,5 +283,29 @@ public class EmpresaTransporte {
 
         }
         return datos;
+    }
+
+    public String obtenerUsuariosEdadSuperior(int edad) {
+        String datos = "";
+
+        for (Usuario usuario : getListaUsuarios()) {
+            if (usuario.getEdad() > edad) {
+                datos += usuario.toString() +"\n";
+            }
+
+        }
+        return datos;
+    }
+
+    public int obtenerModeloInferior() {
+        int resultado = 0;
+
+        for (VehiculoCarga vehiculoCarga : getListaVehiculosCarga()) {
+            if (vehiculoCarga.getModelo() < 2020) {
+                resultado += 1;
+            }
+        }
+        return resultado;
+
     }
 }

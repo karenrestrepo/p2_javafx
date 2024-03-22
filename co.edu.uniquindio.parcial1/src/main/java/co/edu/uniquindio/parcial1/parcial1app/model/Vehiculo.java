@@ -11,7 +11,7 @@ import java.util.List;
 public abstract class Vehiculo {
 
     private String placa;
-    private String modelo;
+    private int modelo;
     private String marca;
     private String color;
     private String numeroChasis;
@@ -25,7 +25,7 @@ public abstract class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(String placa, String modelo, String marca, String color, String numeroChasis) {
+    public Vehiculo(String placa, int modelo, String marca, String color, String numeroChasis) {
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
@@ -37,7 +37,7 @@ public abstract class Vehiculo {
         return placa;
     }
 
-    public String getModelo() {
+    public int getModelo() {
         return modelo;
     }
 
@@ -73,7 +73,7 @@ public abstract class Vehiculo {
         this.ownedByEmpresaTransporte = ownedByEmpresaTransporte;
     }
 
-    public void setModelo(String modelo) {
+    public void setModelo(int modelo) {
         this.modelo = modelo;
     }
 
